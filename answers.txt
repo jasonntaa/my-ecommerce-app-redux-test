@@ -1,0 +1,15 @@
+1. useState is best for simple, local state that only one component needs. A common example is toggling UI elements or tracking the value of a form input.
+
+2. useReducer is preferred when state has multiple related fields or when the update logic becomes more complex. It helps centralize state transitions and keeps the code organized.
+
+3. Prop drilling happens when props are passed through multiple components that do not actually use them, just so a deeply nested component can access the data. It is considered a problem because it clutters components and makes the data flow harder to maintain.
+
+4. The main trade-off is that when a context value changes, all components consuming that context re-render, which can cause unnecessary performance overhead if the context holds frequently updated data.
+
+5. 
+createSlice requires three properties:
+• name
+• initialState
+• reducers
+
+6. Context API is the better choice because the user object is simple, changes infrequently, and needs to be accessible across a few components without complex state logic. Using Redux adds extra setup, boilerplate, and tooling that isn’t necessary for something this simple
